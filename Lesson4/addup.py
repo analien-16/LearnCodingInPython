@@ -1,10 +1,9 @@
-def addup(total, index, max):
-
-  total = total + index
-  index = index + 1
-  if index > max:
-    return total
+num = int(input("Pick a number to add up all the even numbers less than it: "))
+def addup(num):
+  if num == 1:
+    return 1
   else:
-    return addup(total, index, max)
+    return num + addup(num - 1)
 
-print(addup, 0, 1, 10)
+
+print(addup(num))
